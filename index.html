@@ -1,75 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lab 2 Project - Comprehensive CSS</title>
-  <link rel="stylesheet" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header class="main-header">
-    <h1 id="site-title">My Website</h1>
-    <nav class="responsive-nav">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button class="nav-toggle" aria-label="Toggle Navigation">☰</button>
-    </nav>
-  </header>
+    <div class="calculator">
+        <div class="menu">
+            <span id="menuBtn" class="three-dots">...</span>
+            <div id="submenu" class="submenu hidden">
+                <button onclick="enableScientificMode()">Scientific Mode</button>
+                <button onclick="enableUnitConversion()">Unit Conversion</button>
+                <button onclick="enableCurrencyConversion()">Currency Conversion</button>
+            </div>
+        </div>
+        
+        <input type="text" id="display" readonly>
 
-  <!-- Home Section -->
-  <section id="home" class="page-section home animation-example">
-    <h2>Welcome</h2>
-    <p>This is the home section. Explore our website to learn more about what we offer.</p>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="page-section about">
-    <h2>About Us</h2>
-    <div class="box-model-example">
-      <div class="box">
-        <p>Our company is dedicated to providing the best services to our clients. We value excellence, integrity, and innovation.</p>
-      </div>
+        <div class="buttons">
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="operate('/')">÷</button>
+            
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="operate('*')">×</button>
+            
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="operate('-')">−</button>
+            
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="operate('+')">+</button>
+        </div>
     </div>
-  </section>
 
-  <!-- Services Section -->
-  <section id="services" class="page-section services">
-    <h2>Our Services</h2>
-    <div class="flex-layout">
-      <div class="flex-item">
-        <h3>Service 1</h3>
-        <p>Detail about Service 1.</p>
-      </div>
-      <div class="flex-item">
-        <h3>Service 2</h3>
-        <p>Detail about Service 2.</p>
-      </div>
-      <div class="flex-item">
-        <h3>Service 3</h3>
-        <p>Detail about Service 3.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="page-section contact">
-    <h2>Contact Us</h2>
-    <button class="button">Send Message</button>
-    <a href="#home" class="hover-animation">Back to Home</a>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 My Website. All rights reserved.</p>
-  </footer>
-
-  <script src="scripts/script.js"></script>
+    <!-- Link to the JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>
-
- 

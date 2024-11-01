@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #fff5e6; /* Light orange background */
+}
+
+.calculator {
+    width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #ff8c00; /* Vibrant orange background */
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.three-dots {
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 25px;
+    right: 0;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 4px;
+    z-index: 10;
+}
+
+.submenu button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.submenu button:hover {
+    background-color: #ffd2a3;
+}
+
+#display {
+    width: 100%;
+    height: 60px; /* Taller display for vertical style */
+    font-size: 24px;
+    padding: 10px;
+    text-align: right;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #ff8c00; /* Orange text */
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    font-size: 18px;
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #ffad42; /* Lighter orange for buttons */
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #ff7f00;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #e67300;
+    transform: scale(0.95);
+}
+
+.hidden {
+    display: none;
+}
