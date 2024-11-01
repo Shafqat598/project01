@@ -1,0 +1,322 @@
+/* =====================================================
+   CSS Reset (optional but recommended)
+   You can include a CSS reset here to ensure consistency across browsers.
+   For simplicity, we'll use a basic reset.
+===================================================== */
+
+/* Basic CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   CSS Variables for Consistency and Easy Maintenance
+===================================================== */
+
+:root {
+  --primary-color: #333;
+  --secondary-color: #4CAF50;
+  --background-color: #f0f0f0;
+  --header-bg: #333;
+  --header-text: #fff;
+  --box-bg: #fff;
+  --box-border: #333;
+  --flex-bg: #4CAF50;
+  --flex-text: #fff;
+  --grid-bg: #d0d0d0;
+  --font-family-main: 'Arial, sans-serif';
+  --font-family-heading: 'Georgia, serif';
+}
+
+/* =====================================================
+   Global Styles
+===================================================== */
+
+body {
+  font-family: var(--font-family-main);
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-family-heading);
+  color: var(--primary-color);
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #004999;
+  text-decoration: underline;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-family-main);
+}
+
+/* =====================================================
+   Header Styles
+===================================================== */
+
+.main-header {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  padding: 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+#site-title {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.responsive-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.responsive-nav ul li {
+  margin: 0 15px;
+}
+
+.responsive-nav ul li a {
+  color: var(--header-text);
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--header-text);
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+/* =====================================================
+   Page Sections
+===================================================== */
+
+.page-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.page-section h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.page-section p {
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  font-size: 1em;
+}
+
+/* =====================================================
+   Box Model Example
+===================================================== */
+
+.box-model-example {
+  background-color: #e0e0e0;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  width: 300px;
+  padding: 20px;
+  border: 5px solid var(--box-border);
+  margin: 30px auto;
+  background-color: var(--box-bg);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* =====================================================
+   Flex Layout for Services
+===================================================== */
+
+.flex-layout {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.flex-item {
+  background-color: var(--flex-bg);
+  color: var(--flex-text);
+  padding: 20px;
+  flex: 1 1 250px;
+  border-radius: 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.flex-item:hover {
+  transform: translateY(-5px);
+  background-color: #45a049;
+}
+
+/* =====================================================
+   Typography Enhancements
+===================================================== */
+
+.center-text {
+  text-align: center;
+}
+
+.spacing {
+  letter-spacing: 0.5px;
+  word-spacing: 2px;
+}
+
+.highlight {
+  color: #e60000;
+  font-style: italic;
+}
+
+/* =====================================================
+   Responsive Design with Media Queries
+===================================================== */
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  .main-header {
+    padding: 10px;
+  }
+
+  .responsive-nav ul {
+    display: none;
+    flex-direction: column;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .flex-layout {
+    flex-direction: column;
+  }
+
+  .box {
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 601px) and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+
+  .flex-layout {
+    flex-direction: row;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1025px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* =====================================================
+   Advanced CSS: Transitions, Transformations, and Animations
+===================================================== */
+
+/* Button with Transition and Transformation */
+.button {
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Transform Example */
+.transform-example {
+  width: 100px;
+  height: 100px;
+  background-color: #ffcc00;
+  margin: 20px auto;
+  transition: transform 0.5s ease;
+}
+
+.transform-example:hover {
+  transform: rotate(45deg) scale(1.2);
+}
+
+/* Animation Example */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animation-example {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+/* Hover Animation for Navigation */
+.hover-animation {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--secondary-color);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.hover-animation:hover {
+  color: #005f6a;
+  transform: translateY(-5px);
+}
+
+/* =====================================================
+   Footer Styles
+===================================================== */
+
+footer {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* =====================================================
+   Additional Styles
+===================================================== */
+
+/* Smooth Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+}
